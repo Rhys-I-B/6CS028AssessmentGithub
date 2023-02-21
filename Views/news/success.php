@@ -1,3 +1,3 @@
 <html>
-	<p>News item created successfully.</p>
+	<p>News items created successfully.</p>
 </html>
