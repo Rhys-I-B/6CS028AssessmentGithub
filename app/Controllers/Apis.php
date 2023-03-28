@@ -41,6 +41,7 @@
 		
 		public function games()
 		{
+			echo view('templates/header');
 			echo view('apis/games');
 		}
 	}
