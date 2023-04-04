@@ -31,18 +31,30 @@
 		
 		public function reed()
 		{
+			echo view('templates/header');
 			echo view('apis/reed');
+			echo view('templates/footer');
 		}
 		
 		public function weather()
 		{
+			echo view('templates/header');
 			echo view('apis/weather');
+			echo view('templates/footer');
 		}
 		
 		public function games()
 		{
 			echo view('templates/header');
 			echo view('apis/games');
+			echo view('templates/footer');
+		}
+		
+		public function template()
+		{
+			echo view('templates/header');
+			echo view('apis/template');
+			echo view('templates/footer');
 		}
 	}
 ?>

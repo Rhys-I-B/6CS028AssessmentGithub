@@ -46,6 +46,7 @@ $routes->get('apis/reed', [Apis::class, 'reed']);
 $routes->get('apis/weather', [Apis::class, 'weather']);
 $routes->get('pages', [Pages::class, 'index']);
 $routes->get('(:segment)', [Pages::class, 'view']);
+$routes->get('apis/template', [Apis::class, 'template']);
 
 $routes->get('apis/games', [Apis::class, 'games']);
 

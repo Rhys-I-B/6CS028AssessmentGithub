@@ -1,0 +1,16 @@
+CRITICAL - 2023-04-04 11:54:11 --> Cannot redeclare App\Controllers\Apis::games()
+in APPPATH/Controllers/Apis.php on line 48.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-04-04 11:54:29 --> Cannot redeclare App\Controllers\Apis::games()
+in APPPATH/Controllers/Apis.php on line 48.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-04-04 12:28:37 --> Undefined constant "base_url"
+in APPPATH/Views/templates/header.php on line 10.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Pages.php(23): view()
+ 5 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Pages->view()
+ 6 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
