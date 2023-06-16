@@ -50,6 +50,18 @@
 			echo view('templates/footer');
 		}
 		
+		public function login()
+		{
+			echo view('templates/header');
+			echo view('account/login');
+		}
+		
+		public function register()
+		{
+			echo view('templates/header');
+			echo view('account/register');
+		}
+		
 		public function template()
 		{
 			echo view('templates/header');

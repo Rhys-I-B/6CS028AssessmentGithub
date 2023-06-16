@@ -43,6 +43,8 @@ $routes->get('newsajax', [News::class, 'index']);
 $routes->get('ajax/get/(:segment)', [Ajax::class, 'get']);
 $routes->get('apis/wiki', [Apis::class, 'wikipedia']);
 $routes->get('apis/reed', [Apis::class, 'reed']);
+$routes->get('account/login', [Apis::class, 'login']);
+$routes->get('account/register', [Apis::class, 'register']);
 $routes->get('apis/weather', [Apis::class, 'weather']);
 $routes->get('pages', [Pages::class, 'index']);
 $routes->get('(:segment)', [Pages::class, 'view']);

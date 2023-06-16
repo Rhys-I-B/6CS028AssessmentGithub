@@ -48,6 +48,12 @@
 						<li class="nav-item">
 							<a class="nav-link" href="<?=base_url('news')?>">News</a>
 						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="<?=base_url('account/login')?>">Login</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="<?=base_url('account/register')?>">Register</a>
+						</li>
 					</ul>
 				</div>
 			</div>
