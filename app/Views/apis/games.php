@@ -62,7 +62,7 @@
 			
 			<br />
 			
-			<div class="row">
+			<!-- <div class="row">
 				<div class="col">
 				<h2>Game 1</h2>
 					<div class="card" style="width: 24rem;">
@@ -115,7 +115,7 @@
 					</div>
 				</div>
 			</div>
-			<br>
+			<br> -->
 			
 				<!-- This is the container which holds the grid and card(s) "only one card is made, and the foreach loop creates a new card for how many games -->
 			<div class="container">
@@ -131,9 +131,9 @@
 								<p class="card-text text-center">Released: <?php echo $game["released"] ?></p>
 								<p class="card-text text-center">Rating: <?php echo $game["rating"] ?>/5</p>
 								<div class="d-grid gap-2 d-md-block text-center">
-								  <button class="btn btn-dark" type="button">Button</button>
-								  <button class="btn btn-dark" type="button">Button</button>
-								  <button class="btn btn-dark" type="button">Button</button>
+								  <button class="btn btn-dark" type="button">Save</button>
+								  <button class="btn btn-dark" type="button">Info</button>
+								  <button class="btn btn-dark" type="button">Buy</button>
 								</div>
 							</div>
 						</div>

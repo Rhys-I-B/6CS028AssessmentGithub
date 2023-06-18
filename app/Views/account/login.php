@@ -3,7 +3,7 @@
 		<title>Login</title>
 	</head>
 	<body>
-		<form action="login.php" method="post">
+		<form action="<?=base_url()?>/apis/games" method="post">
 
 			<h2>LOGIN</h2>
 

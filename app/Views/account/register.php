@@ -21,14 +21,20 @@
 				  print("MySQL error: " . mysqli_error($mysqli));
 				  exit;
 				}
-				$newusername = NULL;
-				$newemail = NULL;
-				$newpassword = NULL;
+				$newusername = "";
+				$newemail = "";
+				$newpassword = "";
+				
+				if ($_SERVER["REQUEST_METHOD"] == "POST")
+				{
+					$newusername = $_POST["uname"];
+					$newemail = $_POST["email"];
+					$newpassword = $_POST["password"];
+				}
 			}
 		?>
 		
-		<form action="register.php" method="post">
-
+		<form method="post" action="<?=base_url()?>/apis/games">
 			<h2>Register</h2>
 
 			<?php if (isset($_GET['error'])) { ?>
@@ -36,37 +42,29 @@
 			<?php } ?>
 
 			<label>User Name</label>
-			<input type="text" name="uname" placeholder="User Name" required><br>
+			<input type="text" placeholder="User Name" required name="uname"><br>
 			
 			<label>Email</label>
-			<input type="email" name="email" placeholder="Email" required><br>
+			<input type="email" placeholder="Email" required name="email"><br>
 
 			<label>Password</label>
-			<input type="password" name="password" placeholder="Password" required><br>
+			<input type="password" placeholder="Password" required name="password"><br>
 			
 			<label>Confirm Password</label>
-			<input type="password" name="cpassword" placeholder="Confirm Password" required><br>
+			<input type="password" placeholder="Confirm Password" required name="cpassword"><br>
 
-			<button type="submit" onclick()="createAccount()">Register</button>
+			<button type="submit" name="submit" value="Submit">Register</button>
 
 		 </form>
-		 <script>
-				function createAccount()
-				{
-					<?php
-						$newusername = $_GET['uname'];
-						$newemail = $_GET['email'];
-						$newpassword = $_GET['password'];
-						$res = mysqli_query($mysqli, "INSERT INTO accountDetails VALUES ('$newusername', '$newemail', '$newpassword');");
-						// Are there any errors in my SQL statement?
-						if(!$res) 
-						{
-							 print("MySQL error: " . mysqli_error($mysqli));
-							 exit;
-						}
-					?>
-				}
-			</script>
+		 <?php
+			$res = mysqli_query($mysqli, "INSERT INTO `accountDetails`(`username`, `email`, `password`) VALUES ('$newusername','$newemail','$newpassword')");
+			// Are there any errors in my SQL statement?
+			if(!$res) 
+			{
+				print("MySQL error: " . mysqli_error($mysqli));
+				exit;
+			}
+		 ?>
 	</body>
 	
 	<style>
